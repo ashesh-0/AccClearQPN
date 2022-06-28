@@ -1,0 +1,11 @@
+conda install pytorch==1.6.0 torchvision==0.7.0 -c pytorch
+conda install pytorch-lightning -c conda-forge -y
+conda install scikit-image -y
+conda install -c anaconda basemap -y
+conda install -c anaconda pillow -y
+python -m pip uninstall matplotlib
+python -m pip install matplotlib==2.0.2
+conda install h5py -y
+conda install -c anaconda netcdf4 -y
+python -m pip install test-tube
+python -m pip install pytorch-msssim==0.2.1
