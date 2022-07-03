@@ -1,4 +1,4 @@
-from core.enum import Enum
+from core.base_enum import Enum
 
 
 class ModelType(Enum):

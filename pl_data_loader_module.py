@@ -4,7 +4,7 @@ from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
 from core.data_loader_type import DataLoaderType
-from core.enum import DataType
+from core.base_enum import DataType
 from data_loaders.classifier.classifier_data_loader import ClassifierDataLoader
 from data_loaders.data_loader_all_loaded import DataLoaderAllLoaded
 from data_loaders.data_loader_grid import DataLoaderGrid

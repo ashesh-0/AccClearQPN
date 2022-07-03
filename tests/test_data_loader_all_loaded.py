@@ -7,7 +7,7 @@ from skimage.transform import resize
 
 # conda install -c conda-forge basemap-data-hires
 from core.constants import LOGALT_Q95, RADAR_Q95, RAIN_Q95, TIME_GRANULARITY_MIN
-from core.enum import DataType
+from core.base_enum import DataType
 from core.file_utils import RadarFileManager
 from data_loader import DataLoader
 from data_loader_all_loaded import DataLoaderAllLoaded

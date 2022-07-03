@@ -360,5 +360,4 @@ class KernelShiftedPrediction(nn.Module):
                 loss2D[..., t_sx:t_ex, t_sy:t_ey] = torch.min(loss, loss2D[..., t_sx:t_ex, t_sy:t_ey].clone())
 
 
-#         import pdb;pdb.set_trace()
         return k_predicted.permute(1, 0, 2, 3)

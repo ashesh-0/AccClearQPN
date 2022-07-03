@@ -9,7 +9,7 @@ from core.compressed_rain_data import CompressedRainData
 # from core.compressed_radar_data import CompressedRadarData
 from core.constants import LOGALT_Q95, RADAR_Q95, RAIN_Q95, TIME_GRANULARITY_MIN
 from core.dataset import load_data
-from core.enum import DataType
+from core.base_enum import DataType
 #from core.map import Taiwan
 from core.radar_data_aggregator import CompressedAggregatedRadarData
 

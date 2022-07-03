@@ -13,6 +13,7 @@ from core.file_utils import RadarFileManager, RainFileManager
 from core.time_utils import TimeSteps
 
 
+
 def keep_first_half(dic):
     """
     Keep data only for first 15 days of each month.

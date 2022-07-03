@@ -9,7 +9,7 @@ import torch.nn.parallel
 import torch.optim
 import torch.utils.data
 
-from core.enum import DataType
+from core.base_enum import DataType
 from core.loss_type import BlockAggregationMode, LossType
 from core.model_type import ModelType
 from models.adverserial_model import AdvModel

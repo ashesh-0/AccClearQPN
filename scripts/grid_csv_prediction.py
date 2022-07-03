@@ -15,7 +15,7 @@ from torch.utils.cpp_extension import CUDA_HOME
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from core.enum import DataType, Enum
+from core.base_enum import DataType, Enum
 # from data_loaders.data_loader_all_loaded import DataLoaderAllLoaded
 from data_loaders.cur_value_baseline import CurrentValueBaseLine, DataLoaderAllLoaded
 from utils.prediction_utils import get_prediction, get_worstK_prediction

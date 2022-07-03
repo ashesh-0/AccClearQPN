@@ -22,7 +22,7 @@ from torch.utils.data import DataLoader
 # from utils.analysis_utils import compute_precision_recall
 from tqdm import tqdm
 
-from core.enum import DataType
+from core.base_enum import DataType
 from core.file_utils import RadarFileManager
 from core.loss_type import BlockAggregationMode, LossType
 from core.model_type import ModelType

@@ -34,8 +34,6 @@ class AdvConsModel(AdvModel):
         # tqdm_dict = {'adv_loss': adv_loss}
         loss = adv_loss * self._adv_w
         output = OrderedDict({'loss': loss, 'prediction': predicted_reconstruction})
-        # import pdb
-        # pdb.set_trace()
         return output
 
     def training_step(self, batch, batch_idx, optimizer_idx):

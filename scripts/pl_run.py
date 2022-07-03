@@ -14,7 +14,7 @@ from pytorch_lightning.loggers import TestTubeLogger
 from torch.utils.cpp_extension import CUDA_HOME
 
 from core.data_loader_type import DataLoaderType
-from core.enum import DataType
+from core.base_enum import DataType
 from core.loss_type import BlockAggregationMode, LossType
 from core.model_type import ModelType
 from pl_data_loader_module import PLDataLoader

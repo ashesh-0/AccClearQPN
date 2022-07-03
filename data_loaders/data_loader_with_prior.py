@@ -1,6 +1,6 @@
 import numpy as np
 
-from core.enum import DataType
+from core.base_enum import DataType
 from data_loaders.data_loader_all_loaded import DataLoaderAllLoaded
 
 

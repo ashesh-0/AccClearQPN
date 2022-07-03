@@ -10,7 +10,6 @@ from core.constants import DBZ_Z, NX, NY
 from core.file_utils import RadarFileManager
 from core.raw_data import RawRadarData
 
-os.environ['PROJ_LIB'] = '/home/u4421059/.conda/envs/venv/share/proj/'
 
 
 class CompressedRadarData:

@@ -6,7 +6,7 @@ import torch.nn as nn
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.core.lightning import LightningModule
 
-from core.enum import Enum
+from core.base_enum import Enum
 from core.running_average import RunningAverage
 from models.base_model import BaseModel
 from models.discriminator import Discriminator, Discriminator2, Discriminator3, Discriminator4

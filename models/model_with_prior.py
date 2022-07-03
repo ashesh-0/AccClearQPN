@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from core.enum import DataType
+from core.base_enum import DataType
 from models.model import EF
 
 

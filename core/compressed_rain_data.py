@@ -10,8 +10,6 @@ from core.constants import NX, NY
 from core.file_utils import RainFileManager
 from core.raw_data import RawRainData
 
-os.environ['PROJ_LIB'] = '/tmp2/ashesh/miniconda3/envs/venv/share/proj/'
-
 
 class CompressedRainData:
     def __init__(self, fpath):
