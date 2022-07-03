@@ -13,45 +13,6 @@ from core.file_utils import RadarFileManager, RainFileManager
 from core.time_utils import TimeSteps
 
 
-def create_dataset(
-        start_dt,
-        end_dt,
-        input_len,
-        target_len,
-        radar_dir=RADAR_DIR,
-        rain_dir=RAINFALL_DIR,
-        disjoint_entries=False,
-):
-    radar_fm = RadarFileManager(radar_dir)
-    rain_fm = RainFileManager(rain_dir)
-    cur_dt = start_dt
-    dt_list = [cur_dt]
-    while end_dt > cur_dt:
-        cur_dt = TimeSteps.next(cur_dt)
-        if cur_dt in SKIP_TIME_LIST:
-            continue
-        dt_list.append(cur_dt)
-
-    dataset = []
-    N = len(dt_list) - (input_len - 1) - target_len
-    stepsize = 1
-    if disjoint_entries:
-        stepsize = input_len
-
-    for i in range(0, N, stepsize):
-        inp_radar_fpaths = [radar_fm.fpath_from_dt(dt) for dt in dt_list[i:i + input_len]]
-        inp_rain_fpaths = [rain_fm.fpath_from_dt(dt) for dt in dt_list[i:i + input_len]]
-        inp = list(zip(inp_radar_fpaths, inp_rain_fpaths))
-
-        target = [rain_fm.fpath_from_dt(dt) for dt in dt_list[i + input_len:i + input_len + target_len]]
-        dataset.append((inp, target))
-
-    print(f"Created Dataset:{start_dt.strftime('%Y%m%d_%H%M')}-{end_dt.strftime('%Y%m%d_%H%M')}, "
-          f" Disjoint:{int(disjoint_entries)} InpLen:{input_len} TarLen:{target_len} {len(dataset)/1000}K points")
-
-    return dataset
-
-
 def keep_first_half(dic):
     """
     Keep data only for first 15 days of each month.
